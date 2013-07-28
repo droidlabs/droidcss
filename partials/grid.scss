@@ -1,0 +1,28 @@
+.grid-container {
+  max-width: $grid-width;
+  margin-left: auto;
+  margin-right: auto;
+  clear: both;
+  &:before, &:after {
+    content: ".";
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    font-size: 0;
+    line-height: 0;
+    width: 0;
+    height: 0;
+    clear: both;
+  }
+}
+
+@for $i from 1 through 12 {
+  $num: $i;
+  .grid-#{$num} {
+    width: $num * $column-width * 6 + ($num - 1) * 2 * $column-width;
+    margin-left: $column-width;
+    margin-right: $column-width;
+    float: left;
+    @include box-sizing(border-box);
+  }
+}
