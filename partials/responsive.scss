@@ -14,8 +14,8 @@
 @media screen and (max-width: $media-mobile-max) {
   .grid-container {
     max-width: 100%;
-    padding-left: $column-width;
-    padding-right: $column-width;
+    padding-left: $gutter-width;
+    padding-right: $gutter-width;
   }
   .hide-on-mobile {
     display: none !important;
@@ -28,8 +28,8 @@
 @media screen and (min-width: $media-tablet-min) and (max-width: $media-tablet-max) {
   .grid-container {
     max-width: 100%;
-    padding-left: $column-width;
-    padding-right: $column-width;
+    padding-left: $gutter-width;
+    padding-right: $gutter-width;
   }
   .hide-on-tablet {
     display: none !important;

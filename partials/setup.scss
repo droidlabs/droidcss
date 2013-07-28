@@ -6,4 +6,6 @@ $media-desktop-min: 1025px !default;
 
 // Grid width
 $grid-width: 960px !default;
-$column-width: 1.04166666666% !default;
+$columns-count: 12 !default; // 12 or 16 columns
+$gutter-width: 1.04166666666% !default;
+$column-width: 6 !default; // Column width
