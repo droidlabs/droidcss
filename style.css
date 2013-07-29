@@ -76,6 +76,71 @@ input, select {
   vertical-align: middle;
 }
 
+html {
+  background: #fff;
+}
+
+body {
+  cursor: default;
+}
+
+strong, b {
+  font-weight: 700;
+}
+
+em, i {
+  font-style: italic;
+}
+
+input, textarea {
+  cursor: text;
+}
+
+a, label, select, button, input[type=button], input[type=submit], input[type=checkbox], input[type=radio], input[type=file] {
+  cursor: pointer;
+}
+
+.hide, .hidden {
+  display: none;
+}
+
+.fleft {
+  float: left;
+}
+
+.fright {
+  float: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.clear {
+  clear: both;
+  clear: both;
+  width: 100%;
+  height: 1px;
+  overflow: hidden;
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
 .grid-container {
   max-width: 960px;
   margin-left: auto;
@@ -385,39 +450,4 @@ input, select {
   .only-tablet {
     display: block !important;
   }
-}
-.clear {
-  clear: both;
-  width: 100%;
-  height: 1px;
-  overflow: hidden;
-}
-
-.clearfix:after {
-  content: ".";
-  display: block;
-  clear: both;
-  visibility: hidden;
-  line-height: 0;
-  height: 0;
-}
-
-.fleft {
-  float: left;
-}
-
-.fright {
-  float: right;
-}
-
-.text-left {
-  text-align: left;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.text-right {
-  text-align: right;
 }
