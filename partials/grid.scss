@@ -1,3 +1,10 @@
+// Getting number of columns and setting it's width
+@if $columns-count == 12 {
+  $column-width: 6;
+} @else {
+  $column-width: 4;
+}
+
 .grid-container {
   max-width: $grid-width;
   margin-left: auto;
@@ -15,46 +22,12 @@
     clear: both;
   }
 }
+
 %grid-settings {
   margin-left: $gutter-width;
   margin-right: $gutter-width;
   float: left;
   @include box-sizing(border-box);
-}
-
-@for $i from 1 through $columns-count {
-  $num: $i;
-  .grid-#{$num} {
-    @extend %grid-settings;
-  }
-}
-
-// Getting number of columns and setting it's width
-@if $columns-count == 12 {
-  $column-width: 6;
-} @else {
-  $column-width: 4;
-}
-
-@for $i from 1 through $columns-count {
-  $num: $i;
-  .grid-#{$num} {
-    width: ( $num * $gutter-width * $column-width ) + ( ($num - 1) * 2 * $gutter-width ); // (column number * gutter width * (column width in px + current step - 1) * 2 * gutter width);
-  }
-}
-
-@for $i from 1 through $columns-count {
-  $num: $i;
-  .prefix-#{$num} {
-    margin-left: ( $num * $gutter-width * $column-width ) + ( ($num - 1) * 2 * $gutter-width ); // (column number * gutter width * (column width in px + current step - 1) * 2 * gutter width);
-  }
-}
-
-@for $i from 1 through $columns-count {
-  $num: $i;
-  .suffix-#{$num} {
-    margin-right: ( $num * $gutter-width * $column-width ) + ( ($num - 1) * 2 * $gutter-width ); // (column number * gutter width * (column width in px + current step - 1) * 2 * gutter width);
-  }
 }
 
 %position-relative {
@@ -63,6 +36,9 @@
 
 @for $i from 1 through $columns-count {
   $num: $i;
+  .grid-#{$num} {
+    @extend %grid-settings;
+  }
   .push-#{$num}, .pull-#{$num} {
     @extend %position-relative;
   }
@@ -70,14 +46,11 @@
 
 @for $i from 1 through $columns-count {
   $num: $i;
-  .push-#{$num} {
-    left: ( $num * $gutter-width * $column-width ) + ( ($num - 1) * 2 * $gutter-width ); // (column number * gutter width * (column width in px + current step - 1) * 2 * gutter width);
-  }
-}
+  $content-width: $num * $gutter-width * $column-width + ($num - 1) * 2 * $gutter-width; // (column number * gutter width * (column width in px + current step - 1) * 2 * gutter width)
 
-@for $i from 1 through $columns-count {
-  $num: $i;
-  .pull-#{$num} {
-    left: -( $num * $gutter-width * $column-width ) + ( ($num - 1) * 2 * $gutter-width ); // (column number * gutter width * (column width in px + current step - 1) * 2 * gutter width);
-  }
+  .grid-#{$num} { width: $content-width; }
+  .prefix-#{$num} { margin-left: $content-width; }
+  .suffix-#{$num} { margin-right: $content-width; }
+  .push-#{$num} { left: $content-width; }
+  .pull-#{$num} { left: -$content-width; }
 }
