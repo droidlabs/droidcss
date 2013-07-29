@@ -17,7 +17,7 @@ On Mac it's easy to use it with:
 * [Hammer](http://www.hammerformac.com/)
 * [LiveReload](http://www.livereload.com/)
 
-### Variables
+## Variables
 
 All the variables can be found in partials/setup.scss file
 
@@ -73,7 +73,7 @@ Column width (default is 6). Don't mess with it. In 12 columns layout it's 60px 
 
     $column-width: 6;
 
-### Available mixins:
+## Available mixins:
 
 #### Box sizing:
     @include box-sizing(border-box);
