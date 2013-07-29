@@ -1,13 +1,21 @@
 html, body {
   height: 100%;
+  font: 400 14px/1.2 'Helvetica Neue', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+  letter-spacing: -.3px;
 }
 
 header {
   background: #69D2E7;
   font: 700 28px/3 'Helvetica Neue', 'HelveticaNeue', Helvetica, Arial, sans-serif;
-  letter-spacing: -.3px;
   text-transform: uppercase;
   color: #fff;
+}
+header a {
+  color: #fff;
+  text-decoration: none;
+}
+header a:hover {
+  text-decoration: underline;
 }
 
 .grid-box {
@@ -27,6 +35,13 @@ header {
 .grid-box:hover {
   margin-top: 130px;
   opacity: .9;
+}
+
+.grid-block {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  background: #E0E4CC;
+  line-height: 40px;
 }
 
 footer {
