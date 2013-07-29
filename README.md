@@ -76,13 +76,64 @@ Column width (default is 6). Don't mess with it. In 12 columns layout it's 60px 
 ## Available mixins:
 
 #### Box sizing:
+
+Usage:
+
     @include box-sizing(border-box);
+
+CSS output result:
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
 #### Font-face:
+
+Usage:
+
+    @include font-face('MuseoSans', 'museosans-regular');
     @include font-face('MuseoSans', 'museosans-bold-italic', '700', 'italic');
+
+CSS output result:
+  
+    @font-face {
+      font-family: "MuseoSans";
+      font-weight: 400;
+      font-style: normal;
+      src: url("/assets/fonts/file-name.eot");
+      src: url("/assets/fonts/file-name.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/file-name.woff") format("woff"), url("/assets/fonts/file-name.ttf") format("truetype"), url("/assets/fonts/file-name.svg#MuseoSans") format("svg");
+    }
+    @font-face {
+      font-family: "MuseoSans";
+      font-weight: "700";
+      font-style: "italic";
+      src: url("/assets/fonts/file-name.eot");
+      src: url("/assets/fonts/file-name.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/file-name.woff") format("woff"), url("/assets/fonts/file-name.ttf") format("truetype"), url("/assets/fonts/file-name.svg#MuseoSans") format("svg");
+    }
+
 #### Gradients:
+
+Usage:
+
     @include linear-gradient(#ff0000, #cc0000);
+
+CSS output result:
+
+    background-color: white;
+    background-image: -webkit-linear-gradient(white, black);
+    background-image: linear-gradient(white, black);
+
 #### Transitions:
+
+Usage:
+
     @include transition((opacity) (.2s) (linear));
+
+CSS output result:
+
+    -webkit-transition: opacity 0.2s linear;
+    -moz-transition: opacity 0.2s linear;
+    transition: opacity 0.2s linear;
 
 ## License
 
