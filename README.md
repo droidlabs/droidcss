@@ -95,20 +95,21 @@ Usage:
     @include font-face('MuseoSans', 'museosans-bold-italic', '700', 'italic');
 
 CSS output result:
-  
+
     @font-face {
       font-family: "MuseoSans";
       font-weight: 400;
       font-style: normal;
-      src: url("/assets/fonts/file-name.eot");
-      src: url("/assets/fonts/file-name.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/file-name.woff") format("woff"), url("/assets/fonts/file-name.ttf") format("truetype"), url("/assets/fonts/file-name.svg#MuseoSans") format("svg");
+      src: url("/assets/fonts/museosans-regular.eot");
+      src: url("/assets/fonts/museosans-regular.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/museosans-regular.woff") format("woff"), url("/assets/fonts/museosans-regular.ttf") format("truetype"), url("/assets/fonts/museosans-regular.svg#MuseoSans") format("svg");
     }
+
     @font-face {
       font-family: "MuseoSans";
       font-weight: "700";
       font-style: "italic";
-      src: url("/assets/fonts/file-name.eot");
-      src: url("/assets/fonts/file-name.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/file-name.woff") format("woff"), url("/assets/fonts/file-name.ttf") format("truetype"), url("/assets/fonts/file-name.svg#MuseoSans") format("svg");
+      src: url("/assets/fonts/museosans-bold-italic.eot");
+      src: url("/assets/fonts/museosans-bold-italic.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/museosans-bold-italic.woff") format("woff"), url("/assets/fonts/museosans-bold-italic.ttf") format("truetype"), url("/assets/fonts/museosans-bold-italic.svg#MuseoSans") format("svg");
     }
 
 #### Gradients:

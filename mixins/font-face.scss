@@ -4,17 +4,17 @@
     font-weight: $weight;
     font-style: $style;
     @if $asset-pipeline == true {
-      src: font-url('#{$fonts-path}#{file-name}.eot');
-      src: font-url('#{$fonts-path}#{file-name}.eot?#iefix')          format('embedded-opentype'),
-           font-url('#{$fonts-path}#{file-name}.woff')                format('woff'),
-           font-url('#{$fonts-path}#{file-name}.ttf')                 format('truetype'),
-           font-url('#{$fonts-path}#{file-name}.svg##{$font-family}') format('svg');
+      src: font-url('#{$fonts-path}#{$file-name}.eot');
+      src: font-url('#{$fonts-path}#{$file-name}.eot?#iefix')          format('embedded-opentype'),
+           font-url('#{$fonts-path}#{$file-name}.woff')                format('woff'),
+           font-url('#{$fonts-path}#{$file-name}.ttf')                 format('truetype'),
+           font-url('#{$fonts-path}#{$file-name}.svg##{$font-family}') format('svg');
     } @else {
-      src: url('#{$fonts-path}#{file-name}.eot');
-      src: url('#{$fonts-path}#{file-name}.eot?#iefix')               format('embedded-opentype'),
-           url('#{$fonts-path}#{file-name}.woff')                     format('woff'),
-           url('#{$fonts-path}#{file-name}.ttf')                      format('truetype'),
-           url('#{$fonts-path}#{file-name}.svg##{$font-family}')      format('svg');
+      src: url('#{$fonts-path}#{$file-name}.eot');
+      src: url('#{$fonts-path}#{$file-name}.eot?#iefix')               format('embedded-opentype'),
+           url('#{$fonts-path}#{$file-name}.woff')                     format('woff'),
+           url('#{$fonts-path}#{$file-name}.ttf')                      format('truetype'),
+           url('#{$fonts-path}#{$file-name}.svg##{$font-family}')      format('svg');
     }
   }
 }
