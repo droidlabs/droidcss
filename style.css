@@ -126,7 +126,6 @@ a, label, select, button, input[type=button], input[type=submit], input[type=che
 
 .clear {
   clear: both;
-  clear: both;
   width: 100%;
   height: 1px;
   overflow: hidden;
