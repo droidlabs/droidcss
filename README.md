@@ -1,6 +1,6 @@
 # DroidCSS
 
-Small responsive framework with grids and couple mixins. We've took the most used mixins from [Bourbon](https://github.com/thoughtbot/bourbon) and added [960px Grids](https://960.gs)
+Small responsive framework with grids and couple mixins. We've took the most used mixins from [Bourbon](https://github.com/thoughtbot/bourbon) and added [960px Grids](https://960.gs) to it. Very light, powerful and fast CSS Grid framework for you to use.
 
 ## What's under the hood?
 
@@ -20,6 +20,10 @@ On Mac it's easy to use it with:
 ### Variables
 
 All the variables can be found in partials/setup.scss file
+
+**asset-pipeline**
+Set to true if you use it in your project (default to false). If don't use it or don't know what is it about, leave it as is.
+    $asset-pipeline: false;
 
 * $asset-pipeline: set to true if you use it in your project (default to false)
 * $fonts-path: include path to font files with trailing slash (default is '/assets/fonts/')
@@ -45,11 +49,11 @@ All the variables can be found in partials/setup.scss file
 
 ## License
 
-Licenced under MIT: <http://opensource.org/licenses/MIT>
+Licenced under MIT: <http://opensource.org/licenses/MIT>.
 
 ## Got questions?
 
-Feel free to contact us regarding DroidCSS via [twitter](http://twitter.com/droidlabs) or [email](mailto:ilya@droidlabs.pro)
+Feel free to contact us regarding DroidCSS via [twitter](http://twitter.com/droidlabs) or [email](mailto:ilya@droidlabs.pro).
 
 ## Thanks for using DroidCSS
 
