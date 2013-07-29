@@ -21,22 +21,57 @@ On Mac it's easy to use it with:
 
 All the variables can be found in partials/setup.scss file
 
-**asset-pipeline**
+#### asset-pipeline
 
 Set to true if you use it in your project (default to false). If don't use it or don't know what is it about, leave it as is.
 
     $asset-pipeline: false;
 
-* $asset-pipeline: set to true if you use it in your project (default to false)
-* $fonts-path: include path to font files with trailing slash (default is '/assets/fonts/')
-* $media-mobile-max: breakpoint for mobile devices (default is '767px')
-* $media-tablet-min: breakpoint for tablet minimum width (default is '768px')
-* $media-tablet-max: breakpoint for tablet maximum width (default is '1024px')
-* $media-desktop-min: breakpoint for desktop (default is '1025px')
-* $grid-width: site width (default is '960px')
-* $columns-count: select 12 or 16 columns (default is '12')
-* $gutter-width: spacing between the columns (default is '1.04166666666%' which is 10px in 960.gs)
-* $column-width: column width (default is 6). Don't mess with it. In 12 columns layout it's 60px (which is 6), in 16 columns layout it will be 40px (which is 4). Mixin will change it automaticly, just set column with to 12 or 16.
+#### fonts-path
+
+Include path to font files with trailing slash (default is '/assets/fonts/').
+
+    $fonts-path: '/assets/fonts/';
+
+#### media queries
+
+Breakpoints for mobile devices, tablets and desktop. To disable of the support of responsive layouts, just remove responsive.scss from style.scss. Here is explanation of the variables:
+
+    $media-mobile-max: breakpoint for mobile devices (default is '767px')
+    $media-tablet-min: breakpoint for tablet minimum width (default is '768px')
+    $media-tablet-max: breakpoint for tablet maximum width (default is '1024px')
+    $media-desktop-min: breakpoint for desktop (default is '1025px')
+
+Media queries example:
+
+    $media-mobile-max: 767px;
+    $media-tablet-min: 768px;
+    $media-tablet-max: 1024px;
+    $media-desktop-min: 1025px;
+
+#### grid-width
+
+Default site width. For 960.gs it's 960px
+
+    $grid-width: 960px;
+
+#### columns-count
+
+Select 12 or 16 columns for layout (2 types of columns are supported with 960.gs).  The default value is '12' columns.
+
+    $columns-count: 12;
+
+#### gutter-width
+
+Spacing between the columns (default is '1.04166666666%' which is 10px in 960.gs).
+
+    $gutter-width: 1.04166666666%;
+
+#### column-width
+
+Column width (default is 6). Don't mess with it. In 12 columns layout it's 60px (which is 6), in 16 columns layout it will be 40px (which is 4). Mixin will change it automaticly, just set column with to 12 or 16.
+
+    $column-width: 6;
 
 ### Available mixins:
 
