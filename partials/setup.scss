@@ -1,3 +1,7 @@
+// Paths
+$asset-pipeline: false; // if don't use it or don't know what is it about, leave it as is
+$fonts-path: '/assets/fonts/'; // with trailing slash, please. Otherwise the fonts won't load
+
 // Responsive vars
 $media-mobile-max: 767px !default;
 $media-tablet-min: 768px !default;
