@@ -22,7 +22,9 @@ On Mac it's easy to use it with:
 All the variables can be found in partials/setup.scss file
 
 **asset-pipeline**
+
 Set to true if you use it in your project (default to false). If don't use it or don't know what is it about, leave it as is.
+
     $asset-pipeline: false;
 
 * $asset-pipeline: set to true if you use it in your project (default to false)
