@@ -136,6 +136,16 @@ CSS output result:
     -moz-transition: opacity 0.2s linear;
     transition: opacity 0.2s linear;
 
+## Default classes
+
+Default classes available in *partials/defaults.scss*:
+
+* .hide, .hidden - hide block
+* .fleft, .fright - float blocks left or right
+* .text-left, .text-center, .text-right - align text left, centered or right
+* .clear - clearing blocks
+* .clearfix - clearfix for blocks
+
 ## License
 
 Licenced under MIT: <http://opensource.org/licenses/MIT>.
