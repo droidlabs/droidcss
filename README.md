@@ -2,6 +2,8 @@
 
 Small responsive framework with grids and couple mixins. We've took the most used mixins from [Bourbon](https://github.com/thoughtbot/bourbon) and added [960px Grids](https://github.com/nathansmith/960-grid-system/) to it. Very light, powerful and fast CSS Grid framework for you to use.
 
+## [Grid Demo](http://droidlabs.github.io/droidcss/)
+
 ## What's under the hood?
 
 * CSS Reset
