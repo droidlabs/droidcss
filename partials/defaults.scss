@@ -1,5 +1,9 @@
 html { background: #fff; }
 
+body { cursor: default; }
+input, textarea { cursor: text; }
+a, label, select, button, input[type=button], input[type=submit], input[type=checkbox], input[type=radio], input[type=file] { cursor: pointer; }
+
 .hide, .hidden { display: none; }
 
 .fleft { float: left; }
