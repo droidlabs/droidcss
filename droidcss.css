@@ -521,21 +521,6 @@ a, label, select, button, input[type=button], input[type=submit], input[type=che
     display: block !important;
   }
 }
-@media screen and (max-width: 767px) {
-  .grid-container {
-    max-width: 100%;
-    padding-left: 1.04167%;
-    padding-right: 1.04167%;
-  }
-
-  .hide-on-mobile {
-    display: none !important;
-  }
-
-  .only-mobile {
-    display: block !important;
-  }
-}
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .grid-container {
     max-width: 100%;
@@ -548,6 +533,21 @@ a, label, select, button, input[type=button], input[type=submit], input[type=che
   }
 
   .only-tablet {
+    display: block !important;
+  }
+}
+@media screen and (max-width: 767px) {
+  .grid-container {
+    max-width: 100%;
+    padding-left: 1.04167%;
+    padding-right: 1.04167%;
+  }
+
+  .hide-on-mobile {
+    display: none !important;
+  }
+
+  .only-mobile {
     display: block !important;
   }
 }
