@@ -1,3 +1,15 @@
+// Responsive vars
+$media-mobile-max: 767px !default;
+$media-tablet-min: 768px !default;
+$media-tablet-max: 1024px !default;
+$media-desktop-min: 1025px !default;
+
+// Grid width
+$grid-width: 960px !default;
+$columns-count: 12 !default; // 12 or 16 columns
+$gutter-width: 1.04166666666% !default;
+$column-width: 6 !default; // Column width
+
 // Getting number of columns and setting it's width
 @if $columns-count == 12 {
   $column-width: 6;
@@ -47,10 +59,65 @@
 @for $i from 1 through $columns-count {
   $num: $i;
   $content-width: $num * $gutter-width * $column-width + ($num - 1) * 2 * $gutter-width; // (column number * gutter width * (column width in px + current step - 1) * 2 * gutter width)
-
   .grid-#{$num} { width: $content-width; }
   .prefix-#{$num} { margin-left: $content-width; }
   .suffix-#{$num} { margin-right: $content-width; }
   .push-#{$num} { left: $content-width; }
   .pull-#{$num} { left: -$content-width; }
+}
+
+/* DESKTOP SUPPORT */
+
+@media screen and (min-width: $media-desktop-min) {
+  .hide-on-desktop {
+    display: none !important;
+  }
+  .only-desktop {
+    display: block !important;
+  }
+}
+
+/* TABLET SUPPORT */
+
+@media screen and (min-width: $media-tablet-min) and (max-width: $media-tablet-max) {
+
+  .grid-container {
+    max-width: 100%;
+    padding-left: $gutter-width;
+    padding-right: $gutter-width;
+  }
+  .hide-on-tablet {
+    display: none !important;
+  }
+  .only-tablet {
+    display: block !important;
+  }
+
+  @for $i from 1 through $columns-count {
+    $num: $i;
+    $content-width: $num * $gutter-width * $column-width + ($num - 1) * 2 * $gutter-width; // (column number * gutter width * (column width in px + current step - 1) * 2 * gutter width)
+    .grid-tablet-#{$num} { width: $content-width; }
+  }
+}
+
+/* MOBILE SUPPORT */
+
+@media screen and (max-width: $media-mobile-max) {
+  .grid-container {
+    max-width: 100%;
+    padding-left: $gutter-width;
+    padding-right: $gutter-width;
+  }
+  .hide-on-mobile {
+    display: none !important;
+  }
+  .only-mobile {
+    display: block !important;
+  }
+
+  @for $i from 1 through $columns-count {
+    $num: $i;
+    $content-width: $num * $gutter-width * $column-width + ($num - 1) * 2 * $gutter-width; // (column number * gutter width * (column width in px + current step - 1) * 2 * gutter width)
+    .grid-mobile-#{$num} { width: $content-width; }
+  }
 }
