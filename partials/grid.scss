@@ -86,7 +86,7 @@ $column-width: 6 !default; // Column width
     padding-left: $gutter-width;
     padding-right: $gutter-width;
   }
-  .hide-on-tablet {
+  .hide-on-tablet, .desktop-only, .mobile-only {
     display: none !important;
   }
   .only-tablet {
@@ -108,7 +108,7 @@ $column-width: 6 !default; // Column width
     padding-left: $gutter-width;
     padding-right: $gutter-width;
   }
-  .hide-on-mobile {
+  .hide-on-mobile, .desktop-only, .tablet-only {
     display: none !important;
   }
   .only-mobile {

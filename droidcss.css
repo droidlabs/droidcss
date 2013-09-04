@@ -514,7 +514,7 @@ nav ul li {
     padding-right: 1.04167%;
   }
 
-  .hide-on-tablet {
+  .hide-on-tablet, .desktop-only, .mobile-only {
     display: none !important;
   }
 
@@ -578,7 +578,7 @@ nav ul li {
     padding-right: 1.04167%;
   }
 
-  .hide-on-mobile {
+  .hide-on-mobile, .desktop-only, .tablet-only {
     display: none !important;
   }
 
