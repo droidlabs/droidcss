@@ -72,9 +72,6 @@ $column-width: 6 !default; // Column width
   .hide-on-desktop {
     display: none !important;
   }
-  .only-desktop {
-    display: block !important;
-  }
 }
 
 /* TABLET SUPPORT */
@@ -88,9 +85,6 @@ $column-width: 6 !default; // Column width
   }
   .hide-on-tablet, .only-desktop, .only-mobile {
     display: none !important;
-  }
-  .only-tablet {
-    display: block !important;
   }
 
   @for $i from 1 through $columns-count {
@@ -110,9 +104,6 @@ $column-width: 6 !default; // Column width
   }
   .hide-on-mobile, .only-desktop, .only-tablet {
     display: none !important;
-  }
-  .only-mobile {
-    display: block !important;
   }
 
   @for $i from 1 through $columns-count {
