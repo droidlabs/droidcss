@@ -69,7 +69,7 @@ $column-width: 6 !default; // Column width
 /* DESKTOP SUPPORT */
 
 @media screen and (min-width: $media-desktop-min) {
-  .hide-on-desktop {
+  .hide-on-desktop, .only-tablet, .only-mobile {
     display: none !important;
   }
 }
