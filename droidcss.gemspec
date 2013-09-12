@@ -9,7 +9,8 @@ Gem::Specification.new do |s|
   s.email       = ["ilya@droidlabs.pro"]
   s.homepage    = "https://github.com/droidlabs/droidcss"
   s.summary     = "Small responsive framework"
-  s.description = "Small responsive framework "
+  s.description = "Small responsive framework"
+  s.license     = 'MIT'
 
   s.add_dependency('sass', '>= 3.2.0')
 
