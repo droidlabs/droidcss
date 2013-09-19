@@ -91,6 +91,10 @@ $column-width: 6 !default; // Column width
     $num: $i;
     $content-width: $num * $gutter-width * $column-width + ($num - 1) * 2 * $gutter-width; // (column number * gutter width * (column width in px + current step - 1) * 2 * gutter width)
     .grid-tablet-#{$num} { width: $content-width; }
+    .prefix-tablet-#{$num} { margin-left: $content-width; }
+    .suffix-tablet-#{$num} { margin-right: $content-width; }
+    .push-tablet-#{$num} { left: $content-width; }
+    .pull-tablet-#{$num} { left: -$content-width; }
   }
 }
 
@@ -110,5 +114,9 @@ $column-width: 6 !default; // Column width
     $num: $i;
     $content-width: $num * $gutter-width * $column-width + ($num - 1) * 2 * $gutter-width; // (column number * gutter width * (column width in px + current step - 1) * 2 * gutter width)
     .grid-mobile-#{$num} { width: $content-width; }
+    .prefix-mobile-#{$num} { margin-left: $content-width; }
+    .suffix-mobile-#{$num} { margin-right: $content-width; }
+    .push-mobile-#{$num} { left: $content-width; }
+    .pull-mobile-#{$num} { left: -$content-width; }
   }
 }
