@@ -1,3 +1,6 @@
+### 1.0.3 (10 October 2013)
+  - Added clearfix mixin
+
 ### 1.0.2 (19 September 2013)
   - Added mobile prefixes
 
