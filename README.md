@@ -6,11 +6,36 @@ Small responsive framework with grids and couple mixins. We've took the most use
 
 ## What's under the hood?
 
-* CSS Reset
+* Normalize.css
 * CSS3 Mixins
 * Compiled CSS file (from SCSS)
 
-## How to use with SCSS
+## How to use DroidCSS within Rails/Sinatra application
+
+#### Step 1: Set variables
+
+Set variables if needed. Otherwise, skip to the next step.
+
+Create a file called setup.scss in 'partials' folder and declare it right before any DroidCSS files declaration. You main SCSS (probably, it will be application.scss) file will look like this:
+
+    @import 'partials/setup';
+
+
+#### Step 2.1: Application without web-fonts (@font-face)
+
+Import DroidCSS main file:
+
+    @import 'droidcss';
+
+#### Step 2.2: Application with web-fonts (@font-face)
+
+Create a new file 'fonts.scss' in 'partials' folder. Place font-face mixins in fonts.scss file. Then import all needed files in the main scss file:
+
+    @import 'droidcss/mixins';
+    @import 'partials/fonts';
+    @import 'droidcss/base';
+
+## How to use SCSS without Rails/Sinatra application
 
 On Mac it's easy to use it with:
 
@@ -18,6 +43,10 @@ On Mac it's easy to use it with:
 * [CodeKit](http://incident57.com/codekit/)
 * [Hammer](http://www.hammerformac.com/)
 * [LiveReload](http://www.livereload.com/)
+
+Just drag&drop DroidCSS folder into the application, then point your html file to DroidCSS. For example:
+
+    <link href="droidcss/droidcss.css" rel="stylesheet">
 
 ## Variables
 
