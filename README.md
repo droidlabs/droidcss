@@ -199,10 +199,6 @@ $direction may be:
 * down
 * left
 * right
-* up-right
-* up-left
-* down-right
-* down-left
 
 Usage:
 
@@ -216,18 +212,6 @@ CSS output result:
     border-style: solid;
     border-width: 5px;
     border-top-color: #ccc;
-
-#### Border-radius:
-
-Usage:
-
-    @include border-radius(10px);
-
-CSS output result:
-
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
 
 ## Default classes
 
