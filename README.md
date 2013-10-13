@@ -12,7 +12,13 @@ Small responsive framework with grids and couple mixins. We've took the most use
 
 ## How to use DroidCSS within Rails/Sinatra application
 
-#### Step 1: Set variables
+#### Step 1: Include gem
+
+Add DroidCSS to your Gemfile & run 'bundle install' in the terminal:
+
+    gem 'droidcss'
+
+#### Step 2: Set variables
 
 Set variables if needed. Otherwise, skip to the next step.
 
@@ -21,13 +27,13 @@ Create a file called setup.scss in 'partials' folder and declare it right before
     @import 'partials/setup';
 
 
-#### Step 2.1: Application without web-fonts (@font-face)
+#### Step 3.1: Application without web-fonts (@font-face)
 
 Import DroidCSS main file:
 
     @import 'droidcss';
 
-#### Step 2.2: Application with web-fonts (@font-face)
+#### Step 3.2: Application with web-fonts (@font-face)
 
 Create a new file 'fonts.scss' in 'partials' folder. Place font-face mixins in fonts.scss file. Then import all needed files in the main scss file:
 
