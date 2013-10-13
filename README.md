@@ -137,8 +137,8 @@ CSS output result:
 
     @font-face {
       font-family: "MuseoSans";
-      font-weight: "700";
-      font-style: "italic";
+      font-weight: 700;
+      font-style: italic;
       src: url("/assets/fonts/museosans-bold-italic.eot");
       src: url("/assets/fonts/museosans-bold-italic.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/museosans-bold-italic.woff") format("woff"), url("/assets/fonts/museosans-bold-italic.ttf") format("truetype"), url("/assets/fonts/museosans-bold-italic.svg#MuseoSans") format("svg");
     }
@@ -191,7 +191,7 @@ CSS output result:
 
 #### Triangle:
 
-Creates a triangle. Arguments ($size, $color, $direction)
+Creates a triangle. Arguments: ($size, $color, $direction)
 
 $direction may be:
 
@@ -222,6 +222,10 @@ Default classes available in *partials/defaults.scss*:
 * .text-left, .text-center, .text-right - align text left, centered or right
 * .clear - clearing blocks
 * .clearfix - clearfix for blocks
+
+## Contributors
+
+Thanks for contributing into the gem, [Alexander](https://github.com/selivandex)!
 
 ## License
 
