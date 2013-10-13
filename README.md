@@ -167,6 +167,52 @@ CSS output result:
     -moz-transition: opacity 0.2s linear;
     transition: opacity 0.2s linear;
 
+#### Size:
+
+Usage:
+
+    @include size(100px, 200px);
+
+CSS output result:
+
+    width: 100px;
+    height: 200px;
+
+#### Square:
+
+Usage:
+
+    @include square(100px);
+
+CSS output result:
+
+    width: 100px;
+    height: 100px;
+
+#### Triangle:
+
+Creates a triangle. Arguments ($size, $color, $direction)
+
+$direction may be:
+
+* up
+* down
+* left
+* right
+
+Usage:
+
+    @include triangle(10px, #ccc, down);
+
+CSS output result:
+
+    height: 0;
+    width: 0;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 5px;
+    border-top-color: #ccc;
+
 ## Default classes
 
 Default classes available in *partials/defaults.scss*:
