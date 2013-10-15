@@ -213,6 +213,19 @@ CSS output result:
     border-width: 5px;
     border-top-color: #ccc;
 
+#### Placeholder:
+
+Usage:
+
+    @include placeholder(#ccc);
+
+CSS output result:
+
+    :-moz-placeholder            { color: #ccc; } // Firefox 4-18
+    ::-moz-placeholder           { color: #ccc; } // Firefox 19+
+    :-ms-input-placeholder       { color: #ccc; } // Internet Explorer 10+
+    ::-webkit-input-placeholder  { color: #ccc; } // Safari and Chrome
+
 ## Default classes
 
 Default classes available in *partials/defaults.scss*:
