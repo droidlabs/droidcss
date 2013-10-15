@@ -1,5 +1,8 @@
+### 1.0.6 (15 October 2013)
+  - Added more mixins
+
 ### 1.0.5 (14 October 2013)
-  - Improve asset pipeline integration
+  - Improved asset pipeline integration
 
 ### 1.0.3 (10 October 2013)
   - Added clearfix mixin
