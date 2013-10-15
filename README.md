@@ -217,14 +217,14 @@ CSS output result:
 
 Usage:
 
-    @include placeholder(#ccc);
+    @include placeholder(#ccc, italic);
 
 CSS output result:
 
-    :-moz-placeholder            { color: #ccc; } // Firefox 4-18
-    ::-moz-placeholder           { color: #ccc; } // Firefox 19+
-    :-ms-input-placeholder       { color: #ccc; } // Internet Explorer 10+
-    ::-webkit-input-placeholder  { color: #ccc; } // Safari and Chrome
+    :-moz-placeholder            { color: #ccc; font-style:italic;} // Firefox 4-18
+    ::-moz-placeholder           { color: #ccc; font-style:italic; } // Firefox 19+
+    :-ms-input-placeholder       { color: #ccc; font-style:italic; } // Internet Explorer 10+
+    ::-webkit-input-placeholder  { color: #ccc; font-style:italic; } // Safari and Chrome
 
 ## Default classes
 
