@@ -1,3 +1,6 @@
+### 1.0.7 (21 October 2013)
+  - Fixed offsets for grids
+
 ### 1.0.6 (15 October 2013)
   - Added more mixins
 

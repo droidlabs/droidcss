@@ -59,11 +59,12 @@ $column-width: 6 !default; // Column width
 @for $i from 1 through $columns-count {
   $num: $i;
   $content-width: $num * $gutter-width * $column-width + ($num - 1) * 2 * $gutter-width; // (column number * gutter width * (column width in px + current step - 1) * 2 * gutter width)
+  $content-width-offset: $content-width + 3 * $gutter-width;
   .grid-#{$num} { width: $content-width; }
-  .prefix-#{$num} { margin-left: $content-width; }
-  .suffix-#{$num} { margin-right: $content-width; }
-  .push-#{$num} { left: $content-width; }
-  .pull-#{$num} { left: -$content-width; }
+  .prefix-#{$num} { margin-left: $content-width-offset; }
+  .suffix-#{$num} { margin-right: $content-width-offset; }
+  .push-#{$num} { left: $content-width-offset; }
+  .pull-#{$num} { left: -$content-width-offset; }
 }
 
 /* DESKTOP SUPPORT */
@@ -90,11 +91,12 @@ $column-width: 6 !default; // Column width
   @for $i from 1 through $columns-count {
     $num: $i;
     $content-width: $num * $gutter-width * $column-width + ($num - 1) * 2 * $gutter-width; // (column number * gutter width * (column width in px + current step - 1) * 2 * gutter width)
+    $content-width-offset: $content-width + 3 * $gutter-width;
     .grid-tablet-#{$num} { width: $content-width; }
-    .prefix-tablet-#{$num} { margin-left: $content-width; }
-    .suffix-tablet-#{$num} { margin-right: $content-width; }
-    .push-tablet-#{$num} { left: $content-width; }
-    .pull-tablet-#{$num} { left: -$content-width; }
+    .prefix-tablet-#{$num} { margin-left: $content-width-offset; }
+    .suffix-tablet-#{$num} { margin-right: $content-width-offset; }
+    .push-tablet-#{$num} { left: $content-width-offset; }
+    .pull-tablet-#{$num} { left: -$content-width-offset; }
   }
 }
 
@@ -113,10 +115,11 @@ $column-width: 6 !default; // Column width
   @for $i from 1 through $columns-count {
     $num: $i;
     $content-width: $num * $gutter-width * $column-width + ($num - 1) * 2 * $gutter-width; // (column number * gutter width * (column width in px + current step - 1) * 2 * gutter width)
+    $content-width-offset: $content-width + 3 * $gutter-width;
     .grid-mobile-#{$num} { width: $content-width; }
-    .prefix-mobile-#{$num} { margin-left: $content-width; }
-    .suffix-mobile-#{$num} { margin-right: $content-width; }
-    .push-mobile-#{$num} { left: $content-width; }
-    .pull-mobile-#{$num} { left: -$content-width; }
+    .prefix-mobile-#{$num} { margin-left: $content-width-offset; }
+    .suffix-mobile-#{$num} { margin-right: $content-width-offset; }
+    .push-mobile-#{$num} { left: $content-width-offset; }
+    .pull-mobile-#{$num} { left: -$content-width-offset; }
   }
 }
