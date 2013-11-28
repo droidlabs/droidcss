@@ -1,3 +1,6 @@
+### 1.0.8 (28 November 2013)
+  - Minor changes for :selection
+
 ### 1.0.7 (21 October 2013)
   - Fixed offsets for grids
 
