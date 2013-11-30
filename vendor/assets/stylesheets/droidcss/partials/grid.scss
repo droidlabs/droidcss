@@ -35,10 +35,15 @@ $column-width: 6 !default; // Column width
   }
 }
 
+.row {
+  @include clearfix;
+}
+
 %grid-settings {
   margin-left: $gutter-width;
   margin-right: $gutter-width;
   float: left;
+  min-height: 1px;
   @include box-sizing(border-box);
 }
 
