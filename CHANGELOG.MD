@@ -1,3 +1,6 @@
+### 1.0.10 (08 December 2013)
+  / Edited assets-pipeline url
+
 ### 1.0.9 (30 November 2013)
   + Added .row & fixed grid cells height
 

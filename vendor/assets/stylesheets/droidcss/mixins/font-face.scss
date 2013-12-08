@@ -8,11 +8,11 @@ $fonts-path: '/assets/fonts/' !default; // with trailing slash, please. Otherwis
     font-weight: #{$weight};
     font-style: #{$style};
     @if $asset-pipeline == true {
-      src: asset-url('#{$file-name}.eot');
-      src: asset-url('#{$file-name}.eot?#iefix')          format('embedded-opentype'),
-           asset-url('#{$file-name}.woff')                format('woff'),
-           asset-url('#{$file-name}.ttf')                 format('truetype'),
-           asset-url('#{$file-name}.svg##{$font-family}') format('svg');
+      src: font-url('#{$file-name}.eot');
+      src: font-url('#{$file-name}.eot?#iefix')          format('embedded-opentype'),
+           font-url('#{$file-name}.woff')                format('woff'),
+           font-url('#{$file-name}.ttf')                 format('truetype'),
+           font-url('#{$file-name}.svg##{$font-family}') format('svg');
     } @else {
       src: url('#{$fonts-path}#{$file-name}.eot');
       src: url('#{$fonts-path}#{$file-name}.eot?#iefix')               format('embedded-opentype'),
