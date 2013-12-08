@@ -1,3 +1,6 @@
+### 1.0.11 (09 December 2013)
+  / Edited .row selector
+
 ### 1.0.10 (08 December 2013)
   / Edited assets-pipeline url
 

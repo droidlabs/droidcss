@@ -36,6 +36,8 @@ $column-width: 6 !default; // Column width
 }
 
 .row {
+  margin-right: -$gutter-width;
+  margin-left: -$gutter-width;
   @include clearfix;
 }
 
