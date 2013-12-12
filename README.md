@@ -1,4 +1,4 @@
-# DroidCSS
+# DroidCSS [![Roadchange](http://roadchange.com/droidlabs/droidcss/badge.png)](http://roadchange.com/droidlabs/droidcss) 
 
 Small responsive framework with grids and couple mixins. We've took the most used mixins from [Bourbon](https://github.com/thoughtbot/bourbon) and added [960px Grids](https://github.com/nathansmith/960-grid-system/) to it. Very light, powerful and fast CSS Grid framework for you to use.
 
@@ -74,41 +74,35 @@ Include path to font files with trailing slash (default is '/assets/fonts/').
 
 Breakpoints for mobile devices, tablets and desktop. To disable of the support of responsive layouts, just remove responsive.scss from style.scss. Here is explanation of the variables:
 
-    $media-mobile-max: breakpoint for mobile devices (default is '767px')
-    $media-tablet-min: breakpoint for tablet minimum width (default is '768px')
-    $media-tablet-max: breakpoint for tablet maximum width (default is '1024px')
-    $media-desktop-min: breakpoint for desktop (default is '1025px')
+    $mediaMobileMax: breakpoint for mobile devices (default is '767px')
+    $mediaTabletMin: breakpoint for tablet minimum width (default is '768px')
+    $mediaTabletMax: breakpoint for tablet maximum width (default is '1024px')
+    $mediaDesktopMin: breakpoint for desktop (default is '1025px')
 
 Media queries example:
 
-    $media-mobile-max: 767px;
-    $media-tablet-min: 768px;
-    $media-tablet-max: 1024px;
-    $media-desktop-min: 1025px;
+    $mediaMobileMax: 767px;
+    $mediaTabletMin: 768px;
+    $mediaTabletMax: 1024px;
+    $mediaDesktopMin: 1025px;
 
-#### grid-width
+#### gridWidth
 
 Default site width. For 960.gs it's 960px
 
-    $grid-width: 960px;
+    $gridWidth: 960px;
 
-#### columns-count
+#### columnsCount
 
-Select 12 or 16 columns for layout (2 types of columns are supported with 960.gs).  The default value is '12' columns.
+Select how many columns in the layout you would like to have (2 types of columns are supported with 960.gs by default: 12 and 16). The default value is '12' columns.
 
-    $columns-count: 12;
+    $columnsCount: 12;
 
-#### gutter-width
+#### gutterWidth
 
 Spacing between the columns (default is '1.04166666666%' which is 10px in 960.gs).
 
-    $gutter-width: 1.04166666666%;
-
-#### column-width
-
-Column width (default is 6). Don't mess with it. In 12 columns layout it's 60px (which is 6), in 16 columns layout it will be 40px (which is 4). Mixin will change it automaticly, just set column with to 12 or 16.
-
-    $column-width: 6;
+    $gutterWidth: 1.04166666666%;
 
 ## Available mixins:
 
@@ -231,6 +225,10 @@ CSS output result:
     ::-moz-placeholder           { color: #ccc; font-style:italic; } // Firefox 19+
     :-ms-input-placeholder       { color: #ccc; font-style:italic; } // Internet Explorer 10+
     ::-webkit-input-placeholder  { color: #ccc; font-style:italic; } // Safari and Chrome
+
+Please note. This function can be used only within selector! Example:
+
+    input { @include placeholder(#ccc, italic); }
 
 ## Default classes
 

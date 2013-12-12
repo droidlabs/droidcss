@@ -1,8 +1,13 @@
+### 1.1 (13 December 2013)
+  * Breaking changes! All the variables names have been changed!
+  * Improved perfomance with calculations
+  * Moved grid settings to the separate file
+
 ### 1.0.11 (09 December 2013)
-  / Edited .row selector
+  * Edited .row selector
 
 ### 1.0.10 (08 December 2013)
-  / Edited assets-pipeline url
+  * Edited assets-pipeline url
 
 ### 1.0.9 (30 November 2013)
   + Added .row & fixed grid cells height
@@ -29,4 +34,4 @@
   + Added licence info
 
 ### 1.0.0 (06 September 2013)
-  / Initial release
+  * Initial release

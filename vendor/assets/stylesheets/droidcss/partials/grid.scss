@@ -1,24 +1,5 @@
-// Responsive vars
-$media-mobile-max: 767px !default;
-$media-tablet-min: 768px !default;
-$media-tablet-max: 1024px !default;
-$media-desktop-min: 1025px !default;
-
-// Grid width
-$grid-width: 960px !default;
-$columns-count: 12 !default; // 12 or 16 columns
-$gutter-width: 1.04166666666% !default;
-$column-width: 6 !default; // Column width
-
-// Getting number of columns and setting it's width
-@if $columns-count == 12 {
-  $column-width: 6;
-} @else {
-  $column-width: 4;
-}
-
 .grid-container {
-  max-width: $grid-width;
+  max-width: $gridWidth;
   margin-left: auto;
   margin-right: auto;
   clear: both;
@@ -36,14 +17,14 @@ $column-width: 6 !default; // Column width
 }
 
 .row {
-  margin-right: -$gutter-width;
-  margin-left: -$gutter-width;
+  #{$gutterType}-right: -$gutterWidth;
+  #{$gutterType}-left: -$gutterWidth;
   @include clearfix;
 }
 
 %grid-settings {
-  margin-left: $gutter-width;
-  margin-right: $gutter-width;
+  #{$gutterType}-left: $gutterWidth;
+  #{$gutterType}-right: $gutterWidth;
   float: left;
   min-height: 1px;
   @include box-sizing(border-box);
@@ -53,7 +34,7 @@ $column-width: 6 !default; // Column width
   position: relative;
 }
 
-@for $i from 1 through $columns-count {
+@for $i from 1 through $columnsCount {
   $num: $i;
   .grid-#{$num} {
     @extend %grid-settings;
@@ -63,20 +44,20 @@ $column-width: 6 !default; // Column width
   }
 }
 
-@for $i from 1 through $columns-count {
+@for $i from 1 through $columnsCount {
   $num: $i;
-  $content-width: $num * $gutter-width * $column-width + ($num - 1) * 2 * $gutter-width; // (column number * gutter width * (column width in px + current step - 1) * 2 * gutter width)
-  $content-width-offset: $content-width + 3 * $gutter-width;
-  .grid-#{$num} { width: $content-width; }
-  .prefix-#{$num} { margin-left: $content-width-offset; }
-  .suffix-#{$num} { margin-right: $content-width-offset; }
-  .push-#{$num} { left: $content-width-offset; }
-  .pull-#{$num} { left: -$content-width-offset; }
+  $contentWidth: 100% * ($num/$columnsCount) - 2 * $gutterWidth;
+  $contentWidthOffset: 100% * ($num/$columnsCount) + $gutterWidth;
+  .grid-#{$num} { width: $contentWidth; }
+  .prefix-#{$num} { #{$gutterType}-left: $contentWidthOffset; }
+  .suffix-#{$num} { #{$gutterType}-right: $contentWidthOffset; }
+  .push-#{$num} { left: $contentWidthOffset; }
+  .pull-#{$num} { left: -$contentWidthOffset; }
 }
 
 /* DESKTOP SUPPORT */
 
-@media screen and (min-width: $media-desktop-min) {
+@media screen and (min-width: $mediaDesktopMin) {
   .hide-on-desktop, .only-tablet, .only-mobile {
     display: none !important;
   }
@@ -84,49 +65,49 @@ $column-width: 6 !default; // Column width
 
 /* TABLET SUPPORT */
 
-@media screen and (min-width: $media-tablet-min) and (max-width: $media-tablet-max) {
+@media screen and (min-width: $mediaTabletMin) and (max-width: $mediaTabletMax) {
 
   .grid-container {
     max-width: 100%;
-    padding-left: $gutter-width;
-    padding-right: $gutter-width;
+    #{$gutterTypeTablet}-left: $gutterWidth;
+    #{$gutterTypeTablet}-right: $gutterWidth;
   }
   .hide-on-tablet, .only-desktop, .only-mobile {
     display: none !important;
   }
 
-  @for $i from 1 through $columns-count {
+  @for $i from 1 through $columnsCount {
     $num: $i;
-    $content-width: $num * $gutter-width * $column-width + ($num - 1) * 2 * $gutter-width; // (column number * gutter width * (column width in px + current step - 1) * 2 * gutter width)
-    $content-width-offset: $content-width + 3 * $gutter-width;
-    .grid-tablet-#{$num} { width: $content-width; }
-    .prefix-tablet-#{$num} { margin-left: $content-width-offset; }
-    .suffix-tablet-#{$num} { margin-right: $content-width-offset; }
-    .push-tablet-#{$num} { left: $content-width-offset; }
-    .pull-tablet-#{$num} { left: -$content-width-offset; }
+    $contentWidth: 100% * ($num/$columnsCount) - 2 * $gutterWidth;
+    $contentWidthOffset: 100% * ($num/$columnsCount) + $gutterWidth;
+    .grid-tablet-#{$num} { width: $contentWidth; }
+    .prefix-tablet-#{$num} { #{$gutterTypeTabletOffset}-left: $contentWidthOffset; }
+    .suffix-tablet-#{$num} { #{$gutterTypeTabletOffset}-right: $contentWidthOffset; }
+    .push-tablet-#{$num} { left: $contentWidthOffset; }
+    .pull-tablet-#{$num} { left: -$contentWidthOffset; }
   }
 }
 
 /* MOBILE SUPPORT */
 
-@media screen and (max-width: $media-mobile-max) {
+@media screen and (max-width: $mediaMobileMax) {
   .grid-container {
     max-width: 100%;
-    padding-left: $gutter-width;
-    padding-right: $gutter-width;
+    #{$gutterTypeMobile}-left: $gutterWidth;
+    #{$gutterTypeMobile}-right: $gutterWidth;
   }
   .hide-on-mobile, .only-desktop, .only-tablet {
     display: none !important;
   }
 
-  @for $i from 1 through $columns-count {
+  @for $i from 1 through $columnsCount {
     $num: $i;
-    $content-width: $num * $gutter-width * $column-width + ($num - 1) * 2 * $gutter-width; // (column number * gutter width * (column width in px + current step - 1) * 2 * gutter width)
-    $content-width-offset: $content-width + 3 * $gutter-width;
-    .grid-mobile-#{$num} { width: $content-width; }
-    .prefix-mobile-#{$num} { margin-left: $content-width-offset; }
-    .suffix-mobile-#{$num} { margin-right: $content-width-offset; }
-    .push-mobile-#{$num} { left: $content-width-offset; }
-    .pull-mobile-#{$num} { left: -$content-width-offset; }
+    $contentWidth: 100% * ($num/$columnsCount) - 2 * $gutterWidth;
+    $contentWidthOffset: 100% * ($num/$columnsCount) + $gutterWidth;
+    .grid-mobile-#{$num} { width: $contentWidth; }
+    .prefix-mobile-#{$num} { #{$gutterTypeMobileOffset}-left: $contentWidthOffset; }
+    .suffix-mobile-#{$num} { #{$gutterTypeMobileOffset}-right: $contentWidthOffset; }
+    .push-mobile-#{$num} { left: $contentWidthOffset; }
+    .pull-mobile-#{$num} { left: -$contentWidthOffset; }
   }
 }

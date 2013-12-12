@@ -1,0 +1,17 @@
+// Responsive vars
+$mediaMobileMax: 767px !default;
+$mediaTabletMin: 768px !default;
+$mediaTabletMax: 1024px !default;
+$mediaDesktopMin: 1025px !default;
+
+// Grids settings
+$gridWidth: 960px !default;
+$columnsCount: 12 !default;
+
+// Gutters
+$gutterWidth: 1.04166666666% !default;
+$gutterType: margin !default;
+$gutterTypeTablet: padding !default;
+$gutterTypeTabletOffset: margin !default;
+$gutterTypeMobile: padding !default;
+$gutterTypeMobileOffset: margin !default;
