@@ -1,3 +1,6 @@
+### 1.1.1 (13 December 2013)
+  * Changed font vars
+
 ### 1.1 (13 December 2013)
   * Breaking changes! All the variables names have been changed!
   * Improved perfomance with calculations

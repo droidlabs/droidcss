@@ -1,24 +1,20 @@
-// Paths
-$asset-pipeline: false !default; // if don't use it or don't know what is it about, leave it as is
-$fonts-path: '/assets/fonts/' !default; // with trailing slash, please. Otherwise the fonts won't load
-
-@mixin font-face( $font-family, $file-name, $weight: 400, $style: normal ) {
+@mixin font-face( $fontFamily, $fileName, $weight: 400, $style: normal ) {
   @font-face {
-    font-family: $font-family;
+    font-family: $fontFamily;
     font-weight: #{$weight};
     font-style: #{$style};
-    @if $asset-pipeline == true {
-      src: font-url('#{$file-name}.eot');
-      src: font-url('#{$file-name}.eot?#iefix')          format('embedded-opentype'),
-           font-url('#{$file-name}.woff')                format('woff'),
-           font-url('#{$file-name}.ttf')                 format('truetype'),
-           font-url('#{$file-name}.svg##{$font-family}') format('svg');
+    @if $assetPipeline == true {
+      src: font-url('#{$fileName}.eot');
+      src: font-url('#{$fileName}.eot?#iefix')          format('embedded-opentype'),
+           font-url('#{$fileName}.woff')                format('woff'),
+           font-url('#{$fileName}.ttf')                 format('truetype'),
+           font-url('#{$fileName}.svg##{$fontFamily}')  format('svg');
     } @else {
-      src: url('#{$fonts-path}#{$file-name}.eot');
-      src: url('#{$fonts-path}#{$file-name}.eot?#iefix')               format('embedded-opentype'),
-           url('#{$fonts-path}#{$file-name}.woff')                     format('woff'),
-           url('#{$fonts-path}#{$file-name}.ttf')                      format('truetype'),
-           url('#{$fonts-path}#{$file-name}.svg##{$font-family}')      format('svg');
+      src: url('#{$fontsPath}#{$fileName}.eot');
+      src: url('#{$fontsPath}#{$fileName}.eot?#iefix')               format('embedded-opentype'),
+           url('#{$fontsPath}#{$fileName}.woff')                     format('woff'),
+           url('#{$fontsPath}#{$fileName}.ttf')                      format('truetype'),
+           url('#{$fontsPath}#{$fileName}.svg##{$fontFamily}')       format('svg');
     }
   }
 }

@@ -58,17 +58,17 @@ Just drag&drop DroidCSS folder into the application, then point your html file t
 
 All the variables can be found in partials/setup.scss file
 
-#### asset-pipeline
+#### assetPipeline
 
 Set to true if you use it in your project (default to false). If don't use it or don't know what is it about, leave it as is.
 
-    $asset-pipeline: false;
+    $assetPipeline: false;
 
-#### fonts-path
+#### fontsPath
 
 Include path to font files with trailing slash (default is '/assets/fonts/').
 
-    $fonts-path: '/assets/fonts/';
+    $fontsPath: '/assets/fonts/';
 
 #### media queries
 
