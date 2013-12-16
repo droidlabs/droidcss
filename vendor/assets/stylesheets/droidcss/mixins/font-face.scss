@@ -1,3 +1,7 @@
+// Fonts vars
+$assetPipeline: false !default; // if don't use it or don't know what is it about, leave it as is
+$fontsPath: '/assets/fonts/' !default; // with trailing slash, please. Otherwise the fonts won't load
+
 @mixin font-face( $fontFamily, $fileName, $weight: 400, $style: normal ) {
   @font-face {
     font-family: $fontFamily;

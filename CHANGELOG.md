@@ -1,3 +1,6 @@
+### 1.1.2 (16 December 2013)
+  * Updated font vars
+
 ### 1.1.1 (13 December 2013)
   * Changed font vars
 
