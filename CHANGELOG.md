@@ -1,3 +1,6 @@
+### 1.1.3 (09 January 2014)
+  * Added static elements for grids
+
 ### 1.1.2 (16 December 2013)
   * Updated font vars
 

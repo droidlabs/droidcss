@@ -58,6 +58,10 @@
 /* DESKTOP SUPPORT */
 
 @media screen and (min-width: $mediaDesktopMin) {
+  .static-desktop {
+    display: block !important;
+    opacity: 1 !important;
+  }
   .hide-on-desktop, .only-tablet, .only-mobile {
     display: none !important;
   }
@@ -71,6 +75,10 @@
     max-width: 100%;
     #{$gutterTypeTablet}-left: $gutterWidth;
     #{$gutterTypeTablet}-right: $gutterWidth;
+  }
+  .static-tablet {
+    display: block !important;
+    opacity: 1 !important;
   }
   .hide-on-tablet, .only-desktop, .only-mobile {
     display: none !important;
@@ -95,6 +103,10 @@
     max-width: 100%;
     #{$gutterTypeMobile}-left: $gutterWidth;
     #{$gutterTypeMobile}-right: $gutterWidth;
+  }
+  .static-mobile {
+    display: block !important;
+    opacity: 1 !important;
   }
   .hide-on-mobile, .only-desktop, .only-tablet {
     display: none !important;
