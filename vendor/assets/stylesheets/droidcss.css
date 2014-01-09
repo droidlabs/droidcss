@@ -527,8 +527,7 @@ nav ul li {
 
 /* DESKTOP SUPPORT */
 @media screen and (min-width: 1025px) {
-  .static-desktop {
-    display: block !important;
+  .visible-desktop {
     opacity: 1 !important;
   }
 
@@ -544,8 +543,7 @@ nav ul li {
     padding-right: 1.04167%;
   }
 
-  .static-tablet {
-    display: block !important;
+  .visible-tablet {
     opacity: 1 !important;
   }
 
@@ -801,8 +799,7 @@ nav ul li {
     padding-right: 1.04167%;
   }
 
-  .static-mobile {
-    display: block !important;
+  .visible-mobile {
     opacity: 1 !important;
   }
 

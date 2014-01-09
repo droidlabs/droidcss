@@ -58,8 +58,7 @@
 /* DESKTOP SUPPORT */
 
 @media screen and (min-width: $mediaDesktopMin) {
-  .static-desktop {
-    display: block !important;
+  .visible-desktop {
     opacity: 1 !important;
   }
   .hide-on-desktop, .only-tablet, .only-mobile {
@@ -76,8 +75,7 @@
     #{$gutterTypeTablet}-left: $gutterWidth;
     #{$gutterTypeTablet}-right: $gutterWidth;
   }
-  .static-tablet {
-    display: block !important;
+  .visible-tablet {
     opacity: 1 !important;
   }
   .hide-on-tablet, .only-desktop, .only-mobile {
@@ -104,8 +102,7 @@
     #{$gutterTypeMobile}-left: $gutterWidth;
     #{$gutterTypeMobile}-right: $gutterWidth;
   }
-  .static-mobile {
-    display: block !important;
+  .visible-mobile {
     opacity: 1 !important;
   }
   .hide-on-mobile, .only-desktop, .only-tablet {
