@@ -1,3 +1,6 @@
+### 1.1.5 (11 January 2014)
+  * Added mobile prefixes & suffixes = 0
+
 ### 1.1.3 (09 January 2014)
   * Added static elements for grids
 

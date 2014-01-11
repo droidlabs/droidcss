@@ -81,6 +81,8 @@
   .hide-on-tablet, .only-desktop, .only-mobile {
     display: none !important;
   }
+  .prefix-tablet-0 { #{$gutterTypeTabletOffset}-left: 0; }
+  .suffix-tablet-0 { #{$gutterTypeTabletOffset}-right: 0; }
 
   @for $i from 1 through $columnsCount {
     $num: $i;
@@ -108,6 +110,8 @@
   .hide-on-mobile, .only-desktop, .only-tablet {
     display: none !important;
   }
+  .prefix-mobile-0 { #{$gutterTypeMobileOffset}-left: 0; }
+  .suffix-mobile-0 { #{$gutterTypeMobileOffset}-right: 0; }
 
   @for $i from 1 through $columnsCount {
     $num: $i;

@@ -551,6 +551,14 @@ nav ul li {
     display: none !important;
   }
 
+  .prefix-tablet-0 {
+    margin-left: 0;
+  }
+
+  .suffix-tablet-0 {
+    margin-right: 0;
+  }
+
   .grid-tablet-1 {
     width: 6.25%;
   }
@@ -805,6 +813,14 @@ nav ul li {
 
   .hide-on-mobile, .only-desktop, .only-tablet {
     display: none !important;
+  }
+
+  .prefix-mobile-0 {
+    margin-left: 0;
+  }
+
+  .suffix-mobile-0 {
+    margin-right: 0;
   }
 
   .grid-mobile-1 {
