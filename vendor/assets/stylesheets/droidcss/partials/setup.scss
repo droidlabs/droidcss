@@ -10,8 +10,23 @@ $columnsCount: 12 !default;
 
 // Gutters
 $gutterWidth: 1.04166666666% !default;
-$gutterType: margin !default;
-$gutterTypeTablet: padding !default;
-$gutterTypeTabletOffset: margin !default;
-$gutterTypeMobile: padding !default;
-$gutterTypeMobileOffset: margin !default;
+
+$gutterType: null !default;
+$gutterTypeTablet: null !default;
+$gutterTypeTabletOffset: null !default;
+$gutterTypeMobile: null !default;
+$gutterTypeMobileOffset: null !default;
+
+@if (unit($gutterWidth) == "%") {
+  $gutterType: margin !default;
+  $gutterTypeTablet: padding !default;
+  $gutterTypeTabletOffset: margin !default;
+  $gutterTypeMobile: padding !default;
+  $gutterTypeMobileOffset: margin !default;
+} @else {
+  $gutterType: padding !default;
+  $gutterTypeTablet: padding !default;
+  $gutterTypeTabletOffset: margin !default;
+  $gutterTypeMobile: padding !default;
+  $gutterTypeMobileOffset: margin !default;
+}

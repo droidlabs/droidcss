@@ -1,3 +1,19 @@
+@function contentWidth($num) {
+  @if (unit($gutterWidth) == "%") {
+    @return 100% * ($num/$columnsCount) - 2 * $gutterWidth;
+  } @else {
+    @return 100% * ($num/$columnsCount);
+  }
+}
+
+@function contentWidthOffset($num) {
+  @if (unit($gutterWidth) == "%") {
+    @return 100% * ($num/$columnsCount) + $gutterWidth;
+  } @else {
+    @return 100% * ($num/$columnsCount);
+  }
+}
+
 .grid-container {
   max-width: $gridWidth;
   margin-left: auto;
@@ -17,8 +33,8 @@
 }
 
 .row {
-  #{$gutterType}-right: -$gutterWidth;
-  #{$gutterType}-left: -$gutterWidth;
+  margin-right: -$gutterWidth;
+  margin-left: -$gutterWidth;
   @include clearfix;
 }
 
@@ -46,8 +62,8 @@
 
 @for $i from 1 through $columnsCount {
   $num: $i;
-  $contentWidth: 100% * ($num/$columnsCount) - 2 * $gutterWidth;
-  $contentWidthOffset: 100% * ($num/$columnsCount) + $gutterWidth;
+  $contentWidth: contentWidth($num);
+  $contentWidthOffset: contentWidthOffset($num);
   .grid-#{$num} { width: $contentWidth; }
   .prefix-#{$num} { #{$gutterType}-left: $contentWidthOffset; }
   .suffix-#{$num} { #{$gutterType}-right: $contentWidthOffset; }
@@ -86,8 +102,8 @@
 
   @for $i from 1 through $columnsCount {
     $num: $i;
-    $contentWidth: 100% * ($num/$columnsCount) - 2 * $gutterWidth;
-    $contentWidthOffset: 100% * ($num/$columnsCount) + $gutterWidth;
+    $contentWidth: contentWidth($num);
+    $contentWidthOffset: contentWidthOffset($num);
     .grid-tablet-#{$num} { width: $contentWidth; }
     .prefix-tablet-#{$num} { #{$gutterTypeTabletOffset}-left: $contentWidthOffset; }
     .suffix-tablet-#{$num} { #{$gutterTypeTabletOffset}-right: $contentWidthOffset; }
@@ -115,8 +131,8 @@
 
   @for $i from 1 through $columnsCount {
     $num: $i;
-    $contentWidth: 100% * ($num/$columnsCount) - 2 * $gutterWidth;
-    $contentWidthOffset: 100% * ($num/$columnsCount) + $gutterWidth;
+    $contentWidth: contentWidth($num);
+    $contentWidthOffset: contentWidthOffset($num);
     .grid-mobile-#{$num} { width: $contentWidth; }
     .prefix-mobile-#{$num} { #{$gutterTypeMobileOffset}-left: $contentWidthOffset; }
     .suffix-mobile-#{$num} { #{$gutterTypeMobileOffset}-right: $contentWidthOffset; }

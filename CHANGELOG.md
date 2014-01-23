@@ -1,3 +1,6 @@
+### 1.2 (23 January 2014)
+  * Grids now support margins/paddings in px
+
 ### 1.1.5 (11 January 2014)
   * Added mobile prefixes & suffixes = 0
 
