@@ -1,3 +1,6 @@
+### 1.2.2 (27 January 2014)
+  * Fixes for offsets
+
 ### 1.2.1 (27 January 2014)
   * Fixes for offsets
 

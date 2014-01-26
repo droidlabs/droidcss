@@ -8,7 +8,7 @@
 
 @function contentWidthOffset($num) {
   @if (unit($gutterWidth) == "%") {
-    @return 100% * ($num/$columnsCount) + 3 * $gutterWidth;
+    @return 100% * ($num/$columnsCount) + 1 * $gutterWidth;
   } @else {
     @return 100% * ($num/$columnsCount);
   }
