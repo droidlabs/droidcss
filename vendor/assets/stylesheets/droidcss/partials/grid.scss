@@ -41,8 +41,10 @@
 %grid-settings {
   #{$gutterType}-left: $gutterWidth;
   #{$gutterType}-right: $gutterWidth;
-  float: left;
+  display: inline-block;
+  vertical-align: top;
   min-height: 1px;
+  zoom: 1;
   @include box-sizing(border-box);
 }
 
@@ -99,6 +101,7 @@
   }
   .prefix-tablet-0 { #{$gutterTypeTabletOffset}-left: $gutterWidth; }
   .suffix-tablet-0 { #{$gutterTypeTabletOffset}-right: $gutterWidth; }
+  .push-tablet-0, .pull-tablet-0 { left: 0; }
 
   @for $i from 1 through $columnsCount {
     $num: $i;
@@ -128,6 +131,7 @@
   }
   .prefix-mobile-0 { #{$gutterTypeMobileOffset}-left: $gutterWidth; }
   .suffix-mobile-0 { #{$gutterTypeMobileOffset}-right: $gutterWidth; }
+  .push-mobile-0, .pull-mobile-0 { left: 0; }
 
   @for $i from 1 through $columnsCount {
     $num: $i;

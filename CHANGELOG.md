@@ -1,3 +1,7 @@
+### 1.2.3 (14 February 2014)
+  * Breaking changes! Columns now uses inline-block instead of float
+  * Added push/pull for tablets and mobile
+
 ### 1.2.2 (27 January 2014)
   * Fixes for offsets
 
