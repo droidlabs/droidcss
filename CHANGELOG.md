@@ -1,3 +1,6 @@
+### 1.2.4 (22 February 2014)
+  * Removed old IE support
+
 ### 1.2.3 (14 February 2014)
   * Breaking changes! Columns now uses inline-block instead of float
   * Added push/pull for tablets and mobile
