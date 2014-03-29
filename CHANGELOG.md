@@ -1,3 +1,6 @@
+### 1.2.5 (29 March 2014)
+  * Added letter-spacing to fix issue with inline-blocks
+
 ### 1.2.4 (22 February 2014)
   * Removed old IE support
 

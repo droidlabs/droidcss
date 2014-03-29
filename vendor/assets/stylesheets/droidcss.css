@@ -248,6 +248,7 @@ nav ul li {
   margin-left: auto;
   margin-right: auto;
   clear: both;
+  letter-spacing: -16px;
 }
 .grid-container:before, .grid-container:after {
   content: ".";
@@ -277,6 +278,7 @@ nav ul li {
   display: inline-block;
   vertical-align: top;
   min-height: 1px;
+  letter-spacing: 0;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
