@@ -1,32 +1,32 @@
 // Responsive vars
-$mediaMobileMax: 767px !default;
-$mediaTabletMin: 768px !default;
-$mediaTabletMax: 1024px !default;
-$mediaDesktopMin: 1025px !default;
+$mediaMobileMax: 767px !global !default;
+$mediaTabletMin: 768px !global !default;
+$mediaTabletMax: 1024px !global !default;
+$mediaDesktopMin: 1025px !global !default;
 
 // Grids settings
-$gridWidth: 960px !default;
-$columnsCount: 12 !default;
+$gridWidth: 960px !global !default;
+$columnsCount: 12 !global !default;
 
 // Gutters
-$gutterWidth: 1.04166666666% !default;
+$gutterWidth: 1.04166666666% !global !default;
 
-$gutterType: null !default;
-$gutterTypeTablet: null !default;
-$gutterTypeTabletOffset: null !default;
-$gutterTypeMobile: null !default;
-$gutterTypeMobileOffset: null !default;
+$gutterType: null !global !default;
+$gutterTypeTablet: null !global !default;
+$gutterTypeTabletOffset: null !global !default;
+$gutterTypeMobile: null !global !default;
+$gutterTypeMobileOffset: null !global !default;
 
 @if (unit($gutterWidth) == "%") {
-  $gutterType: margin !default;
-  $gutterTypeTablet: padding !default;
-  $gutterTypeTabletOffset: margin !default;
-  $gutterTypeMobile: padding !default;
-  $gutterTypeMobileOffset: margin !default;
+  $gutterType: margin !global !default;
+  $gutterTypeTablet: padding !global !default;
+  $gutterTypeTabletOffset: margin !global !default;
+  $gutterTypeMobile: padding !global !default;
+  $gutterTypeMobileOffset: margin !global !default;
 } @else {
-  $gutterType: padding !default;
-  $gutterTypeTablet: padding !default;
-  $gutterTypeTabletOffset: margin !default;
-  $gutterTypeMobile: padding !default;
-  $gutterTypeMobileOffset: margin !default;
+  $gutterType: padding !global !default;
+  $gutterTypeTablet: padding !global !default;
+  $gutterTypeTabletOffset: margin !global !default;
+  $gutterTypeMobile: padding !global !default;
+  $gutterTypeMobileOffset: margin !global !default;
 }

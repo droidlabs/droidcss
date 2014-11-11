@@ -1,3 +1,6 @@
+### 1.2.6 (11 November 2014)
+  * Added !global to the variables
+
 ### 1.2.5 (29 March 2014)
   * Added letter-spacing to fix issue with inline-blocks
 
