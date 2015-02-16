@@ -18,12 +18,13 @@
   max-width: $gridWidth;
   margin-left: auto;
   margin-right: auto;
-  font-size: 0;
+  letter-spacing: -4px;
 }
 
 .row {
   margin-right: -$gutterWidth;
   margin-left: -$gutterWidth;
+  letter-spacing: -4px;
 }
 
 %grid-settings {
@@ -32,7 +33,7 @@
   display: inline-block;
   vertical-align: top;
   min-height: 1px;
-  font-size: 1rem;
+  letter-spacing: 0;
   @include box-sizing(border-box);
 }
 

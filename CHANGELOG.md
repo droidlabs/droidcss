@@ -1,3 +1,6 @@
+### 1.2.7 (16 February 2015)
+  * Letter-spacing bug fix to avoid 'rem'
+
 ### 1.2.6 (11 November 2014)
   * Added !global to the variables
 
