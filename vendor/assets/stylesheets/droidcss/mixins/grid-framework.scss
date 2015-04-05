@@ -8,6 +8,8 @@
   #{$list} {
     // Prevent columns from collapsing when empty
     min-height: 1px;
+    // Make the element 100% width on small screens by default
+    width: 100%;
     letter-spacing: normal;
     display: inline-block;
     vertical-align: top;
