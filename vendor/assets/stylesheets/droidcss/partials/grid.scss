@@ -1,135 +1,89 @@
-@function contentWidth($num) {
-  @if (unit($gutterWidth) == "%") {
-    @return 100% * ($num/$columnsCount) - 2 * $gutterWidth;
-  } @else {
-    @return 100% * ($num/$columnsCount);
+@import 'droidcss/mixins/grid';
+@import 'droidcss/mixins/grid-framework';
+
+//
+// Grid system
+// --------------------------------------------------
+
+
+// Container widths
+//
+// Set the container width, and override it for fixed navbars in media queries.
+
+.container {
+  @include container-fixed;
+
+  @media (min-width: $screen-sm-min) {
+    width: $container-sm;
+  }
+  @media (min-width: $screen-md-min) {
+    width: $container-md;
+  }
+  @media (min-width: $screen-lg-min) {
+    width: $container-lg;
   }
 }
 
-@function contentWidthOffset($num) {
-  @if (unit($gutterWidth) == "%") {
-    @return 100% * ($num/$columnsCount) + 1 * $gutterWidth;
-  } @else {
-    @return 100% * ($num/$columnsCount);
-  }
+
+// Fluid container
+//
+// Utilizes the mixin meant for fixed width containers, but without any defined
+// width for fluid, full width layouts.
+
+.container-fluid {
+  @include container-fixed;
 }
 
-.grid-container {
-  max-width: $gridWidth;
-  margin-left: auto;
-  margin-right: auto;
-  letter-spacing: -4px;
-}
+
+// Row
+//
+// Rows contain and clear the floats of your columns.
 
 .row {
-  margin-right: -$gutterWidth;
-  margin-left: -$gutterWidth;
-  letter-spacing: -4px;
+  @include make-row;
 }
 
-%grid-settings {
-  #{$gutterType}-left: $gutterWidth;
-  #{$gutterType}-right: $gutterWidth;
-  display: inline-block;
-  vertical-align: top;
-  min-height: 1px;
-  letter-spacing: 0;
-  @include box-sizing(border-box);
+
+// Columns
+//
+// Common styles for small and large grid columns
+
+@include make-grid-columns;
+
+
+// Extra small grid
+//
+// Columns, offsets, pushes, and pulls for extra small devices like
+// smartphones.
+
+@include make-grid(xs);
+
+
+// Small grid
+//
+// Columns, offsets, pushes, and pulls for the small device range, from phones
+// to tablets.
+
+@media (min-width: $screen-sm-min) {
+  @include make-grid(sm);
 }
 
-%position-relative {
-  position: relative;
+
+// Medium grid
+//
+// Columns, offsets, pushes, and pulls for the desktop device range.
+
+@media (min-width: $screen-md-min) {
+  @include make-grid(md);
 }
 
-@for $i from 1 through $columnsCount {
-  $num: $i;
-  .grid-#{$num} {
-    @extend %grid-settings;
-  }
-  .push-#{$num}, .pull-#{$num} {
-    @extend %position-relative;
-  }
+
+// Large grid
+//
+// Columns, offsets, pushes, and pulls for the large desktop device range.
+
+@media (min-width: $screen-lg-min) {
+  @include make-grid(lg);
 }
 
-@for $i from 1 through $columnsCount {
-  $num: $i;
-  $contentWidth: contentWidth($num);
-  $contentWidthOffset: contentWidthOffset($num);
-  .grid-#{$num} { width: $contentWidth; }
-  .prefix-#{$num} { #{$gutterType}-left: $contentWidthOffset; }
-  .suffix-#{$num} { #{$gutterType}-right: $contentWidthOffset; }
-  .push-#{$num} { left: $contentWidthOffset; }
-  .pull-#{$num} { left: -$contentWidthOffset; }
-}
-
-/* DESKTOP SUPPORT */
-
-@media screen and (min-width: $mediaDesktopMin) {
-  .visible-desktop {
-    opacity: 1 !important;
-  }
-  .hide-on-desktop, .only-tablet, .only-mobile {
-    display: none !important;
-  }
-}
-
-/* TABLET SUPPORT */
-
-@media screen and (min-width: $mediaTabletMin) and (max-width: $mediaTabletMax) {
-
-  .grid-container {
-    max-width: 100%;
-    #{$gutterTypeTablet}-left: $gutterWidth;
-    #{$gutterTypeTablet}-right: $gutterWidth;
-  }
-  .visible-tablet {
-    opacity: 1 !important;
-  }
-  .hide-on-tablet, .only-desktop, .only-mobile {
-    display: none !important;
-  }
-  .prefix-tablet-0 { #{$gutterTypeTabletOffset}-left: $gutterWidth; }
-  .suffix-tablet-0 { #{$gutterTypeTabletOffset}-right: $gutterWidth; }
-  .push-tablet-0, .pull-tablet-0 { left: 0; }
-
-  @for $i from 1 through $columnsCount {
-    $num: $i;
-    $contentWidth: contentWidth($num);
-    $contentWidthOffset: contentWidthOffset($num);
-    .grid-tablet-#{$num} { width: $contentWidth; }
-    .prefix-tablet-#{$num} { #{$gutterTypeTabletOffset}-left: $contentWidthOffset; }
-    .suffix-tablet-#{$num} { #{$gutterTypeTabletOffset}-right: $contentWidthOffset; }
-    .push-tablet-#{$num} { left: $contentWidthOffset; }
-    .pull-tablet-#{$num} { left: -$contentWidthOffset; }
-  }
-}
-
-/* MOBILE SUPPORT */
-
-@media screen and (max-width: $mediaMobileMax) {
-  .grid-container {
-    max-width: 100%;
-    #{$gutterTypeMobile}-left: $gutterWidth;
-    #{$gutterTypeMobile}-right: $gutterWidth;
-  }
-  .visible-mobile {
-    opacity: 1 !important;
-  }
-  .hide-on-mobile, .only-desktop, .only-tablet {
-    display: none !important;
-  }
-  .prefix-mobile-0 { #{$gutterTypeMobileOffset}-left: $gutterWidth; }
-  .suffix-mobile-0 { #{$gutterTypeMobileOffset}-right: $gutterWidth; }
-  .push-mobile-0, .pull-mobile-0 { left: 0; }
-
-  @for $i from 1 through $columnsCount {
-    $num: $i;
-    $contentWidth: contentWidth($num);
-    $contentWidthOffset: contentWidthOffset($num);
-    .grid-mobile-#{$num} { width: $contentWidth; }
-    .prefix-mobile-#{$num} { #{$gutterTypeMobileOffset}-left: $contentWidthOffset; }
-    .suffix-mobile-#{$num} { #{$gutterTypeMobileOffset}-right: $contentWidthOffset; }
-    .push-mobile-#{$num} { left: $contentWidthOffset; }
-    .pull-mobile-#{$num} { left: -$contentWidthOffset; }
-  }
-}
+@import 'droidcss/mixins/grid-utilities';
