@@ -307,6 +307,7 @@ nav ul li {
   min-height: 1px;
   letter-spacing: normal;
   display: inline-block;
+  vertical-align: top;
   padding-left: 15px;
   padding-right: 15px;
   -webkit-box-sizing: border-box;
