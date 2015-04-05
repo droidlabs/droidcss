@@ -1,3 +1,3 @@
 module DroidCss
-  VERSION = "1.2.7"
+  VERSION = "2.0"
 end
