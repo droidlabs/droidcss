@@ -1,3 +1,6 @@
+### 2.1 (26 August 2015)
+  * Removed useless mixins, added autoprefixer instead
+
 ### 1.2.7 (16 February 2015)
   * Letter-spacing bug fix to avoid 'rem'
 

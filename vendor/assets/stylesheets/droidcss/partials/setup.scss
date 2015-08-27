@@ -36,7 +36,8 @@ $screen-md-max:              ($screen-lg-min - 1) !default;
 $grid-columns:              12 !default;
 //** Padding between columns. Gets divided in half for the left and right.
 $grid-gutter-width:         30px !default;
-// Navbar collapse
+$grid-float:                false !default;
+
 //** Point at which the navbar becomes uncollapsed.
 $grid-float-breakpoint:     $screen-sm-min !default;
 //** Point at which the navbar begins collapsing.

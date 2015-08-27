@@ -10,13 +10,19 @@
     min-height: 1px;
     // Make the element 100% width on small screens by default
     width: 100%;
-    letter-spacing: normal;
-    display: inline-block;
-    vertical-align: top;
+    min-height: 1px;
+    @if $grid-float == false {
+      letter-spacing: normal;
+      display: inline-block;
+      vertical-align: top;
+    }
+    @else {
+      float: left;
+    }
     // Inner gutter via padding
     padding-left:  ($grid-gutter-width / 2);
     padding-right: ($grid-gutter-width / 2);
-    @include box-sizing(border-box);
+    box-sizing: border-box;
   }
 }
 

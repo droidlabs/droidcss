@@ -106,18 +106,6 @@ Spacing between the columns (default is '1.04166666666%' which is 10px in 960.gs
 
 ## Available mixins:
 
-#### Box sizing:
-
-Usage:
-
-    @include box-sizing(border-box);
-
-CSS output result:
-
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-
 #### Font-face:
 
 Usage:
@@ -142,30 +130,6 @@ CSS output result:
       src: url("/assets/fonts/museosans-bold-italic.eot");
       src: url("/assets/fonts/museosans-bold-italic.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/museosans-bold-italic.woff") format("woff"), url("/assets/fonts/museosans-bold-italic.ttf") format("truetype"), url("/assets/fonts/museosans-bold-italic.svg#MuseoSans") format("svg");
     }
-
-#### Gradients:
-
-Usage:
-
-    @include linear-gradient(#ff0000, #cc0000);
-
-CSS output result:
-
-    background-color: white;
-    background-image: -webkit-linear-gradient(white, black);
-    background-image: linear-gradient(white, black);
-
-#### Transitions:
-
-Usage:
-
-    @include transition((opacity) (.2s) (linear));
-
-CSS output result:
-
-    -webkit-transition: opacity 0.2s linear;
-    -moz-transition: opacity 0.2s linear;
-    transition: opacity 0.2s linear;
 
 #### Size:
 
@@ -235,7 +199,7 @@ Please note. This function can be used only within selector! Example:
 Default classes available in *partials/defaults.scss*:
 
 * .hide, .hidden - hide block
-* .fleft, .fright - float blocks left or right
+* .pull-left, .pull-right - float blocks left or right
 * .text-left, .text-center, .text-right - align text left, centered or right
 * .clear - clearing blocks
 * .clearfix - clearfix for blocks

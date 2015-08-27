@@ -12,7 +12,8 @@ Gem::Specification.new do |s|
   s.description = "Small responsive framework"
   s.license     = 'MIT'
 
-  s.add_dependency('sass', '>= 3.2.0')
+  s.add_dependency('sass', '~> 0')
+  s.add_dependency('autoprefixer-rails', '~> 0')
 
   s.files        = `git ls-files`.split("\n")
   s.executables  = `git ls-files -- bin/*`.split("\n").map { |f| File.basename(f) }
