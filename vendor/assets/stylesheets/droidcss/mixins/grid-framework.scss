@@ -10,7 +10,6 @@
     min-height: 1px;
     // Make the element 100% width on small screens by default
     width: 100%;
-    min-height: 1px;
     @if $grid-float == false {
       letter-spacing: normal;
       display: inline-block;
