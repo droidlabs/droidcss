@@ -1,3 +1,9 @@
+### 2.1.4 (29 August 2015)
+  * Added more helpers
+
+### 2.1.3 (26 August 2015)
+  * Fixes for letter-spacing
+
 ### 2.1 (26 August 2015)
   * Removed useless mixins, added autoprefixer instead
 

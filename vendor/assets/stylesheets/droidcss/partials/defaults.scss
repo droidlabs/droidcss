@@ -8,6 +8,9 @@
 
 .list-unstyled { margin: 0; padding: 0; list-style: none; }
 
+.img-responsive { max-width: 100%; height: auto; }
+.img-responsive-full { width: 100%; height: auto; }
+
 .clear { clear: both; width: 100%; height: 1px; overflow: hidden; }
 .clearfix:after, .clearfix:before { content: " "; display: table; }
 .clearfix:after { clear: both; }

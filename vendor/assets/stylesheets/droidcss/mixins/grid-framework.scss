@@ -73,3 +73,9 @@
   @include loop-grid-columns($grid-columns, $class, push);
   @include loop-grid-columns($grid-columns, $class, offset);
 }
+
+@if $grid-float == false {
+  .container-inner, .letter-spacing {
+    letter-spacing: normal;
+  }
+}
